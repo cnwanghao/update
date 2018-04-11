@@ -134,6 +134,9 @@ public class UpdateUtil {
         if (!apk.exists()) {
             return false;
         }
+        if (TextUtils.isEmpty(md5)) {
+            return true;
+        }
         String _md5 = md5(apk);
         if (TextUtils.isEmpty(_md5)) {
             return false;
